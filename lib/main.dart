@@ -6,15 +6,15 @@ import 'package:solid_flutter_test_task/features/random_color_background/present
 import 'package:solid_flutter_test_task/features/random_color_background/presentation/screens/color_changing_screen.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const Main());
 }
 
 /// Main application widget.
 ///
 /// Provides the ColorCubit to the widget tree and sets up the app.
-class MyApp extends StatelessWidget {
-  /// Creates a [MyApp].
-  const MyApp({super.key});
+class Main extends StatelessWidget {
+  /// Creates a [Main].
+  const Main({super.key});
 
   @override
   Widget build(BuildContext context) {

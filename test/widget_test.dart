@@ -15,7 +15,7 @@ void main() {
     WidgetTester tester,
   ) async {
     // Build our app and trigger a frame.
-    await tester.pumpWidget(const MyApp());
+    await tester.pumpWidget(const Main());
 
     // Verify that "Hello there" text is displayed.
     expect(find.text('Hello there'), findsOneWidget);
