@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:solid_flutter_test_task/features/random_color_background/cubit/color_cubit.dart';
-import 'package:solid_flutter_test_task/features/random_color_background/screens/color_changing_screen.dart';
-import 'package:solid_flutter_test_task/features/random_color_background/services/random_color_background_service.dart';
+
+import 'package:solid_flutter_test_task/features/random_color_background/domain/services/random_color_background_service.dart';
+import 'package:solid_flutter_test_task/features/random_color_background/presentation/cubit/color_cubit.dart';
+import 'package:solid_flutter_test_task/features/random_color_background/presentation/screens/color_changing_screen.dart';
 
 void main() {
   runApp(const RandomColorApp());

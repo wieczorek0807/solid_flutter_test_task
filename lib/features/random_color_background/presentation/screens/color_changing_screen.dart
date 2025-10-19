@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:solid_flutter_test_task/features/random_color_background/cubit/color_cubit.dart';
+import 'package:solid_flutter_test_task/features/random_color_background/presentation/cubit/color_cubit.dart';
 
 /// Screen showing "Hello there" and changing background color on tap.
 ///
