@@ -15,15 +15,22 @@ class ColorChangingScreen extends StatelessWidget {
       builder: (context, backgroundColor) {
         return GestureDetector(
           onTap: () => context.read<ColorCubit>().changeColor(),
-          child: Scaffold(
-            backgroundColor: backgroundColor,
-            body: Center(
-              child: Text(
-                'Hello there',
-                style: TextStyle(
-                  fontSize: 32,
-                  fontWeight: FontWeight.bold,
-                  color: _getContrastColor(backgroundColor),
+          child: AnimatedContainer(
+            duration: const Duration(milliseconds: 800),
+            curve: Curves.easeInOut,
+            color: backgroundColor,
+            child: Scaffold(
+              backgroundColor: Colors.transparent,
+              body: Center(
+                child: AnimatedDefaultTextStyle(
+                  duration: const Duration(milliseconds: 400),
+                  curve: Curves.easeInOut,
+                  style: TextStyle(
+                    fontSize: 32,
+                    fontWeight: FontWeight.bold,
+                    color: _getContrastColor(backgroundColor),
+                  ),
+                  child: const Text('Hello there'),
                 ),
               ),
             ),
