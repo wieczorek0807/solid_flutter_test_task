@@ -11,11 +11,11 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:solid_flutter_test_task/main.dart';
 
 void main() {
-  testWidgets(
-    'Random Color Background app smoke test',
-    (WidgetTester tester) async {
+  testWidgets('Random Color Background app smoke test', (
+    WidgetTester tester,
+  ) async {
     // Build our app and trigger a frame.
-    await tester.pumpWidget(const RandomColorApp());
+    await tester.pumpWidget(const MyApp());
 
     // Verify that "Hello there" text is displayed.
     expect(find.text('Hello there'), findsOneWidget);

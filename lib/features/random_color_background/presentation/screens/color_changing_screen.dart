@@ -38,7 +38,7 @@ class ColorChangingScreen extends StatelessWidget {
                       child: const Text('Hello there'),
                     ),
                   ),
-                  
+
                   // Color history
                   if (colorState.colorHistory.isNotEmpty)
                     Positioned(
@@ -60,13 +60,20 @@ class ColorChangingScreen extends StatelessWidget {
 
   /// Returns black for light backgrounds and white for dark ones.
   Color _getContrastColor(Color backgroundColor) {
+    // Luminance calculation constants
+    const double redWeight = 0.299;
+    const double greenWeight = 0.587;
+    const double blueWeight = 0.114;
+    const double maxColorValue = 255.0;
+    const double luminanceThreshold = 0.5;
+
     // Calculate luminance
     final luminance =
-        (0.299 * (backgroundColor.r * 255.0).round() +
-            0.587 * (backgroundColor.g * 255.0).round() +
-            0.114 * (backgroundColor.b * 255.0).round()) /
-        255;
+        (redWeight * (backgroundColor.r * maxColorValue).round() +
+            greenWeight * (backgroundColor.g * maxColorValue).round() +
+            blueWeight * (backgroundColor.b * maxColorValue).round()) /
+        maxColorValue;
 
-    return luminance > 0.5 ? Colors.black : Colors.white;
+    return luminance > luminanceThreshold ? Colors.black : Colors.white;
   }
 }
