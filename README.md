@@ -10,9 +10,6 @@ A simple Flutter app that changes background color on tap with smooth animations
 -  **Color history** - tap on previous colors to restore them
 -  **Auto contrast** - text color adjusts for readability
 
-## Live Demo
-
-**[Random Color Background Demo Link]()**
 
 ## Tech Stack
 

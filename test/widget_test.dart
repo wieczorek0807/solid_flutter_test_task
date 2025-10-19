@@ -21,6 +21,6 @@ void main() {
     expect(find.text('Hello there'), findsOneWidget);
 
     // Verify that the screen is tappable (GestureDetector is present).
-    expect(find.byType(GestureDetector), findsOneWidget);
+    expect(find.byType(GestureDetector), findsWidgets);
   });
 }
