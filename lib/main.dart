@@ -21,6 +21,7 @@ class RandomColorApp extends StatelessWidget {
     return BlocProvider(
       create: (context) => ColorCubit(RandomColorBackgroundService()),
       child: MaterialApp(
+        debugShowCheckedModeBanner: false,
         title: 'Random Color Background',
         theme: ThemeData(
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
